@@ -1,1 +1,9 @@
-# inference-snap-template
+# [model] inference snap
+
+[description]
+
+Default ports:
+| Configuration |  |
+|---|---|
+| http server | [port] |
+| webui server | [port] |
