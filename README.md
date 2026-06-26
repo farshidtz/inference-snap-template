@@ -1,13 +1,31 @@
-# [model] inference snap
+<!--
+engines: intel-cpu, nvidia-gpu
+http-port: xxx
+-->
 
-[description]
+# Qwen3 inference snap
+
+Available engines:
+* intel-cpu
+* intel-gpu
+* nvidia-cuda
+* cpu
+
+#### Install
+```
+sudo snap install qwen-3
+```
+#### Use
+```
+qwen-3 --help
+```
 
 
 #### Default ports
 | Configuration |  |
 |---|---|
-| http server | [port] |
-| webui server | [port] |
+| http server | 8080 |
+| webui server | 8081 |
 
 ## Resources
 
