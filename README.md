@@ -1,9 +1,12 @@
 <!--
-engines: intel-cpu, nvidia-gpu
-http-port: xxx
+<snap-name>: This is the name of the snap. The name that is registered on the snap store and also the name of the cli command.
+<snap-friendly-name>: This name is just a friendly name for the snap, it can be used in the README and nowhere else.
+<api-port>: The port that the inference snap will use for its API server.
+<webui-port>: The port that the inference snap will use for its webui server.
+<http-host>: The host that the inference snap will use for its API and webui servers.
 -->
 
-# Qwen3 inference snap
+# <snap-friendly-name> inference snap
 
 Available engines:
 * intel-cpu
@@ -13,19 +16,20 @@ Available engines:
 
 #### Install
 ```
-sudo snap install qwen-3
+sudo snap install <snap-name>
 ```
 #### Use
 ```
-qwen-3 --help
+<snap-name> --help
 ```
 
 
 #### Default ports
-| Configuration |  |
-|---|---|
-| http server | 8080 |
-| webui server | 8081 |
+| Configuration |              |
+|---------------|--------------|
+| http server   | <api-port>   |
+| webui server  | <webui-port> |
+| http host     | <http-host>  |
 
 ## Resources
 
@@ -50,3 +54,22 @@ snapcraft pack -v
 ```
 
 Refer to the `./dev` directory for additional development tools.
+
+## Pack a snap with AI agents
+Clone the [inference-snaps-sdk](https://github.com/canonical/inference-snaps-sdk) and build it:
+
+```shell
+git clone https://github.com/canonical/inference-snaps-sdk.git
+cd inference-snaps-sdk
+sdkcraft try
+```
+
+Then you can start the `workshop` environment and pack your snap with AI agents:
+
+```shell
+workshop launch
+workshop shell
+opencode
+```
+
+Choose the preferred LLM in opencode and prompt `start packing` to pack your snap with AI agents.
