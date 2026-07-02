@@ -72,4 +72,4 @@ workshop shell
 opencode
 ```
 
-Choose the preferred LLM in opencode and prompt `start packing` to pack your snap with AI agents.
+Choose the preferred LLM in opencode and prompt `start packing pipeline` to pack your snap with AI agents.
